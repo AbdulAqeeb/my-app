@@ -1,0 +1,14 @@
+.parent{
+background-color:aquamarine;
+
+
+}
+.child{
+    width: 100%;
+    height: 300px;
+    border: 1px solid;
+}
+img{
+    width: 200px;
+    
+}

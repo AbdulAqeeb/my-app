@@ -1,0 +1,35 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    background-color: greenyellow;
+    width: 500px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    
+}
+label{
+    margin-left: 30px;
+    width: 150px;
+    font-size: larger;
+}
+input{
+border-radius: 10px;
+border-color: brown;
+}
+button{
+    width: 150px;
+    background-color: aquamarine;
+    margin-left: 200px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

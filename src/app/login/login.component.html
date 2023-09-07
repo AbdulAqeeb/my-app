@@ -1,0 +1,19 @@
+<form [formGroup]="loginForm">
+<div class="parent">
+    <div class="child">
+        <div class="left">
+            
+        </div>
+        <h1>logout</h1>
+        <hr>
+        <label for="name"></label>
+        <input type="Email" autofocus  placeholder="Email" formControlName="email">
+        <br>
+        <br>
+        <label for="Password"></label>
+        <input type="password" placeholder="Password" id="password" formControlName="password">
+        <br>
+        <button (click)="login()">Log in</button>
+    </div>
+</div>
+</form>

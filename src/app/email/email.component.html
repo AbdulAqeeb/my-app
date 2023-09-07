@@ -1,0 +1,13 @@
+<div class="parent">
+    <div class="child" *ngFor="let email of email">
+    <div class="img">
+        <img src="assets/ns 160.jpg" alt="" width="300px">
+    </div>
+    <div class="deatails" [ngStyle]="{'color':email.completed == true ? 'red' : 'green'}">
+        <p>userid:{{email.userId}}</p>
+        <p>ID:{{email.id}}</p>
+        <p>Title:{{email.title}}</p>
+        <p>completed:{{email.complete}}</p>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.child{
+    background-color: aqua;
+    width:500px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    border-radius: 20px;
+
+}
+button{
+    background-color:green;
+}

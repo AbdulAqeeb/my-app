@@ -1,0 +1,54 @@
+
+<input type="number" [(ngModel)]="time">
+
+<h1 *ngIf="time<12">good Morning</h1>
+<h1 *ngIf="time>=12&&time>17">good afternoon</h1>
+<h1 *ngIf="time>=17">good Night</h1>
+
+<h2 *ngFor ="let age of ages">Age is {{age}}</h2>
+ 
+<p *ngFor="let state of states">{{state}}</p>
+
+<ol>
+    <li *ngFor="let state of states">{{state}}</li>
+</ol>
+
+<select name="" id="">
+    <option value="" *ngFor="let state of states">{{state}}</option>
+
+</select>
+
+<h2 *ngFor="let user of users">Name is {{user.name}} and age is {{user.age}} </h2>
+
+<input type="text" [(ngModel)]="term" (keypress)="filter()">
+<button (click)="ageHighToLow()">age high to low</button>
+<button (click)="increaseByOne()">increase age by one</button>
+<button (click)="total()">total age</button>
+
+<table class="table table-dark table-bordered">
+    <thead>
+        <tr>
+            <td>s.no</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Phone</td>
+            <td>actions</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{user.name}}</td>
+            <td [ngClass]="{'child':user.age<12,'teen':user.age>12&&user.age>19,'young':user.age>19}">{{user.age | age}}</td>
+            <td [ngStyle]="{'color': user.marks>35 ? 'green': 'red'}">{{user.marks}}</td>
+            <td>{{user.phone}}</td>
+            
+
+            <td>
+                <button class="btn btn-danger" (click)="delete(i)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

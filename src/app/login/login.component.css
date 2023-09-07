@@ -1,0 +1,32 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child{
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+
+}
+input{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid red;
+
+}
+button{
+    width: 30%;
+    height: 10%;
+    background-color:greenyellow;
+    border: 10px;
+}

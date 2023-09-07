@@ -1,0 +1,27 @@
+<table class="table table-dark table-bordered">
+    <thead>
+        <tr>
+            <th>API</th>
+            <th>Description</th>
+            <th>auth</th>
+            <th>https</th>
+            <th>cors</th>
+            <th>link</th>
+            <th>category</th>
+        </tr>
+    </thead>
+    <body>
+        <tr *ngFor="let practice of practice">
+            <td>{{practice.API}}</td>
+            <td>{{practice.Descrition}}</td>
+            <td>{{practice.auth}}</td>
+            <td>{{practice.https}}</td>
+            <td>{{practice.cors}}</td>
+            <td>{{practice.link}}</td>
+            <td>{{practice.category}}</td>
+            <td></td>
+        </tr>
+    </body>
+</table>
+
+

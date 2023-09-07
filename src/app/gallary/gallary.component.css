@@ -1,0 +1,22 @@
+.parent{
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+background-color: aliceblue;
+
+}
+.child{
+width: 440px;
+/* display: flex; */
+flex-wrap: nowrap;
+
+border: 3px solid grey;
+border-radius: 20px;
+background-color: aquamarine;
+
+
+}
+img{
+    width: 150px;
+    height: 100px;
+}

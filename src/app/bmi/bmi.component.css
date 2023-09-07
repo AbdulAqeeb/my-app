@@ -1,0 +1,18 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* display: flex; */
+}
+.child{
+    width: 60%;
+    height: 100%;
+    background-color:rgb(46, 111, 139);
+    padding: 200px;
+}
+button{
+    background-color:rgba(255, 0, 0, 0.503);
+}
+
+

@@ -1,0 +1,26 @@
+.parent{
+    background-color: rgb(0, 128, 115);
+    width: 100vw;
+    height: 100vh;
+}
+.child{
+background-color: grey;
+width: 90%;
+height: 90%;
+justify-content:center;
+align-items: center;
+}
+.left{
+    width: 50%;
+    height: 30%;
+    background-color: brown;
+}
+.right{
+background-color: blue;
+}
+button{
+    background-color: green;
+}
+img{
+    width: 300px;
+}

@@ -1,0 +1,42 @@
+
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.child{
+width: 500px;
+height: 600px;
+background-color:mediumslateblue;
+margin-top: 20px;
+border-radius: 10px;
+/* margin-left: 150px; */
+}
+label{
+width:120px ;
+margin: left 20px;
+margin-top: 20px;
+margin-left: 50px;
+font-size:large;
+
+}
+button{
+width: 100px;
+margin-left: 220px;
+
+
+}
+input{
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    
+}
+h1{
+    display: flex;
+    justify-content: center;
+}

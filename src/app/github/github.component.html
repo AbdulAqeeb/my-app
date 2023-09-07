@@ -1,0 +1,28 @@
+<div class="parent">
+    <div class="child" *ngFor="let github of github">
+        <div class="top">
+           <div class="right">
+            <h3>{{github.data.author}}</h3>
+            <p>{{github.data.birthday}}</p>
+            <p>{{github.data.birthplace}}</p>
+        </div>
+        <div class="left">
+            <button class="btn btn-warning">Add New Book</button>
+            <br><br>
+            <button>Sort By Title</button>
+            <button>Sort By Published Data</button>
+        </div>
+        <div class="b1" *ngFor="let github of github.data.github">
+            <select>
+                <option>Edit</option>
+                <option>Delete</option>
+                <option selected>action</option>
+            </select>
+            <img src="{{github.imageUrl}}">
+            <p>{{github.title}}</p>
+            <p>{{github.purchaseLink}}</p>
+            <p>{{github.publishDate}}</p>
+            <button class="btn btn-primary">Buy Book</button>
+        </div>
+        </div>
+    </div>
