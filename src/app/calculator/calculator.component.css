@@ -1,0 +1,36 @@
+
+.parent{
+    background-color:darkturquoise;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    background-color:skyblue;
+    width: 400px;
+    height: 400px;
+}
+label{
+    margin-left: 50px;
+   
+}
+input{
+    margin-left: 10px;
+    border: px solid white;
+    border-radius: 6px;
+}
+button{
+    margin-left: 80px;
+    font-weight:500;
+    width: 80px;
+    border-radius: 5px;
+}
+h1{
+    margin-left: 100px;
+    
+}
+h3{
+    margin-left: 120px;
+}

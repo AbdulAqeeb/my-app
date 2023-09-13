@@ -1,0 +1,17 @@
+<div class="parent">
+
+    <div class="child">
+        <h2>My To Do List</h2>
+
+        <br><br>
+        <p>
+            <input type="text" [(ngModel)]="value" placeholder="Title">
+        <button (click)="add()">Add</button>
+        <p>
+
+        <div *ngFor="let t of terms; let i = index">
+            <p> {{t}} <button (click)="delete(i)">delete</button></p>
+        </div> 
+    </div>
+
+</div>

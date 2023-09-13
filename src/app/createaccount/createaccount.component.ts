@@ -14,6 +14,14 @@ account_name: new FormControl(),
 available_balance: new FormControl(),
 account_number: new FormControl(),
 city:new FormControl(),
+address: new FormGroup({
+  hno: new FormControl(),
+state: new FormControl(),
+pin: new FormControl()
+}),
+type: new FormControl(),
+busFee: new FormControl(),
+hostelFee: new FormControl(),
 
 });
 

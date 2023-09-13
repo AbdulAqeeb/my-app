@@ -14,7 +14,40 @@
         <label>City</label>
         <input type="text" formControlName="city">
         <br><br>
-        <button (click)="submit()">submit</button>
+        <div formArrayName="address">
+            <label>hno</label>
+            <input type="text" formControlName="hno">
+            <br>
+            <label>state</label>
+            <input type="text" formControlName="state">
+            <br>
+            <label>pin</label>
+            <input type="text" formControlName="pin">
+            <br>
+
+        </div>
+                    
+
+            <label>type:</label>
+            <input type="radio" name="type" formControlName="type" value="dayScholor">
+            <label>dayScholor</label>
+            <input type="radio" name="type" formControlName="type" value="residential">
+            <label for="">residential</label>
+            <br>
+        
+
+        <div *ngIf="createaccountform.get('type')?.value == 'residential'">
+            <label>hostel fee</label>
+            <input type="number" formControlName="hostelFee">
+            <br>
+        </div>
+        <div *ngIf="createaccountform.get('type')?.value == 'dayScholor'">
+            <label>bus fee</label>
+            <input type="number" formControlName="busFee">
+            <br>
+        </div>
+
+        <button class="btn btn-warning" (click)="submit()">submit</button>
 
 
 

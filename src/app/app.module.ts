@@ -35,6 +35,10 @@ import { GithubComponent } from './github/github.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { UserComponent } from './user/user.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
+import { TodoComponent } from './todo/todo.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
@@ -69,7 +73,11 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
     GithubComponent,
     CreatevehicleComponent,
     UserComponent,
-    CreateaccountComponent
+    CreateaccountComponent,
+    VehicledetailsComponent,
+    TodoComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

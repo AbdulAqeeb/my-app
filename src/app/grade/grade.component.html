@@ -1,14 +1,17 @@
 <p>grade works!</p>
+<div class="parent">
+    <div class="child">
+    <h1>Marks</h1>
+    <br>
+    <label for="">subject</label>
+    <input type="number" [(ngModel)]="marks">
+    <br><br>
 
-<h1>Marks</h1>
-
-<label for="">subject</label>
-<input type="number" [(ngModel)]="marks">
-<br><br>
-
-<h3 *ngIf="marks<=100&&marks>90">grade A</h3>
-<h3 *ngIf="marks<=90&&marks>70">grade B</h3>
-<h3 *ngIf="marks<=70&&marks>50">grade C</h3>
-<h3 *ngIf="marks<=50&&marks>35">grade D</h3>
-<h3 *ngIf="marks<=34&&marks>0">FAIL</h3>
-<h3 *ngIf="marks>100">Inavalid marks</h3>
+    <h3 *ngIf="marks<=100&&marks>90">grade A</h3>
+    <h3 *ngIf="marks<=90&&marks>70">grade B</h3>
+    <h3 *ngIf="marks<=70&&marks>50">grade C</h3>
+    <h3 *ngIf="marks<=50&&marks>35">grade D</h3>
+    <h3 *ngIf="marks<=34&&marks>0">FAIL</h3>
+    <h3 *ngIf="marks>100">Inavalid marks</h3>
+</div>
+</div>

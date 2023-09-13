@@ -1,0 +1,22 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+    text-align: center;
+}
+.child{
+    background-color: grey;
+    display: contents;
+    justify-content: center;
+    align-items: center;
+
+}
+h2{
+    /* margin-top: 200px; */
+    /* margin-bottom: 150px; */
+
+}
+p{
+    /* margin-top: 200px; */
+
+}

@@ -8,23 +8,60 @@
             <br><br>
             <label for="">Manufacturer:</label>
             <input type="text" formControlName="manufacturer">
-            <br><br>
-            <label for="">Model</label>
-            <input type="text" formControlName="model">
-            <br><br>
-            <label for="">Type</label>
-            <input type="text" formControlName="type">
-            <br><br>
-            <label for="">Fuel:</label>
-            <input type="text" formControlName="fuel">
-            <br><br>
-            <label for="">Color:</label>
-            <input type="text" formControlName="color">
-            <br><br>
-            <button class="btn btn-warning" (click)="submit()">submit</button>
 
+            <div formGroupName="model">
+                <label>fuel</label>
+                <input type="text" formControlName="fuel">
+
+                <label>type</label>
+                <input type="text" formControlName="type">
+
+                <label>Color</label>
+                <input type="text" formControlName="color">
+                <br>
+
+            </div>
+
+            <button class="btn btn-warning" (click)="addCard()">ADD CARD</button>
+            <div formArrayName="cards">
+                <div *ngFor="let card of cardsFormArray.controls; let i=index">
+                    <div formGroupName="{{i}}">
+
+                        <label>no:</label>
+                        <input type="number" formControlName="no">
+                        <br>
+                        <label>exp</label>
+                        <input type="number" formControlName="exp">
+                        <br>
+                        <label>cvv</label>
+                        <input type="number" formArrayName="cvv">
+                        <br>
+                        <button (click)="deleteCard(i)">delete</button>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <label>type: </label>
+            <input type="radio" name="type" formControlName="type" value="dayScholor">
+            <label>day scholor</label>
+            <input type="radio" name="type" formControlName="type" value="residential">
+            <label>residential</label>
+            <br>
+
+            <div *ngIf="vehicleform.get('type')?.value == 'dayScholor'">
+                <label>bus fee</label>
+                <input type="number" formControlName="busFee">
+            </div>
+
+            <div *ngIf="vehicleform.get('type')?.value == 'residential'">
+                <label>hostel fee</label>
+                <input type="number" formControlName="hostelFee">
+
+            </div>
+
+            <button (click)="submit()">submit</button>
         </div>
-
     </div>
 
 </form>

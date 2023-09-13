@@ -1,23 +1,102 @@
+<form>
+    <div class="parent">
+        <div class="child" [formGroup]="userform">
+            <h1>user</h1>
+            <br>
+            <label>Name</label>
+            <input type="text" formControlName="name">
+            <div class="text-danger" *ngIf="userform.get('name')?.touched && userform.get('name')?.invalid">
+                <p *ngIf="userform.get('name')?.errors?.['required']">Name is required</p>
+                <p *ngIf="userform.get('name')?.errors?.['minlength']">Name Should contain atleast 3 characters.</p>
+            </div>
+            <br>
+            <label>Phone</label>
+            <input type="number" formControlName="phone">
+            <div class="text-danger" *ngIf="userform.get('phone')?.touched && userform.get('phone')?.invalid">
+                <p *ngIf="userform.get('phone')?.errors?.['required']">phone is required</p>
+                <p *ngIf="userform.get('phpne')?.errors?.['min']">phone Should contain 10 numbers.</p>
+                <p *ngIf="userform.get('phone')?.errors?.['max']">phone Should not be morethan 10 numbers</p>
+            </div>
+            <br>
+            <label>City</label>
+            <input type="text" formControlName="city">
+            <div *ngIf="userform.get('city')?.touched && userform.get('city')?.invalid">
+                <p *ngIf="userform.get('city')?.errors?.['required']">name is required</p>
 
-<div class="parent">
-    <div class="child" [formGroup]="userform">
-        <h1>USer</h1>
-        <label>Name</label>
-        <input type="text" formControlName="name">
-        <br><br>
-        <label>Phone</label>
-        <input type="number" formControlName="phone">
-        <br><br>
-        <label>City</label>
-        <input type="text" formControlName="city">
-        <br><br>
-        <label>Fee</label>
-        <input type="number" formControlName="fee">
-        <br><br>
-        <label>ID</label>
-        <input type="text" formControlName="id">
-        <br><br>
-        <button (click)="submit()">Submit</button>
+            </div>
+            <br>
+            <label>Fee</label>
+            <input type="number" formControlName="fee">
+            <br>
+            <label>ID</label>
+            <input type="text" formControlName="id">
+            <br>
+            <div formGroupName="address">
+                <label>Hno</label>
+                <input type="text" formControlName="hno">
+                <br><br>
+                <label>state</label>
+                <input type="text" formControlName="state">
 
+                <div class="text-danger" *ngIf="userform.get('address')?.get('state')?.touched && userform.get('address')?.get('state')?.invalid">
+                    <p *ngIf="userform.get('address')?.get('state')?.errors?.['required']">State is</p>
+                </div>
+                <br><br>
+                <label>pin</label>
+                <input type="text" formControlName="pin">
+                <div class="text-danger" *ngIf="userform.get('address')?.get('pin')?.touched && userform.get('address')?.get('pin')?.invalid">
+                    <p *ngIf="userform.get('address')?.get('pin')"></p>
+                </div>
+                <br><br>
+
+            </div>
+            <label>type</label>
+            <input type="radio" name="type" formControlName="type" value="dayScholor" class="mnnn">
+            <label>day scholor</label>
+            <input type="radio" name="type" formControlName="type" value="residental">
+            <label>residental</label>
+            <br>
+
+            <div *ngIf="userform.get('type')?.value == 'dayScholor'">
+                <label>bus fee:</label>
+                <input type="number" formControlName="busFee">
+                <br>
+            </div>
+            <div *ngIf="userform.get('type')?.value == 'residental'">
+                <label>hostel fee:</label>
+                <input type="number" formControlName="hostelFee">
+                <br>
+            </div>
+            
+            <button (click)="addcard()">add card</button>
+            <br>
+            <div formArrayName="'cards">
+                <div *ngFor="let card of cardsFormArray.controls; let i=index">
+                    <div formGroupName="{{i}}">
+
+                        <label>no:</label>
+                        <input type="number" formControlName="no">
+                        <br><br>
+                        <label>exp:</label>
+                        <input type="number" formControlName="exp">
+                        <br><br>
+                        <label>cvv:</label>
+                        <input type="number" formControlName="cvv">
+                        <div class="text-danger" *ngIf="cardsFormArray.controls[i]?.get('cvv')?.touched && cardsFormArray.controls[i]?.get('cvv')?.invalid">
+                            <p *ngIf="cardsFormArray.controls[i]?.get('cvv')?.errors?.['required']">cvv is required</p>
+                            <p *ngIf="cardsFormArray.controls[i]?.get('cvv')?.errors?.['min']">cvv altlest 100.</p>
+                            <p *ngIf="cardsFormArray.controls[i]?.get('cvv')?.errors?.['max']">cvv altlest 999.</p>
+                        </div>
+                        <br><br>
+                        <button (click)="deletecard(i)">delete</button>
+
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <button (click)="submit()">submit</button>
+
+        </div>
     </div>
-</div>
+</form>

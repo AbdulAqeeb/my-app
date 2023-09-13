@@ -1,0 +1,13 @@
+<div class="parent">
+    <div class="act" *ngFor="let boredem of boredom">
+        <h4>{{boredom.activty}}</h4>
+        <h4>{{boredom.type}}</h4>
+        <h4>{{boredom.participants}}</h4>
+        <h4>{{boredom.price}}</h4>
+        <h4>{{boredom.link}}</h4>
+        <h4>{{boredom.key}}</h4>
+        <h4>{{boredom.accessbility}}</h4>
+        <button (click)="reload()">Reload</button>
+    </div>
+
+</div>

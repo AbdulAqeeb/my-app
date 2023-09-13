@@ -1,18 +1,22 @@
 .parent{
     width: 100vw;
     height: 100vh;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* display: flex; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+
 }
 .child{
-    width: 60%;
-    height: 100%;
     background-color:rgb(46, 111, 139);
     padding: 200px;
 }
 button{
-    background-color:rgba(255, 0, 0, 0.503);
+    margin-left: 100px;
+    width: 100px;
+    font-size: large;
 }
-
+h2{
+    margin-left: 50px;
+}
 

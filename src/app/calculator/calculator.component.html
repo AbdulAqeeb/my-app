@@ -1,21 +1,18 @@
-
-<h1 appImp>calculator</h1>
-
-<label>num1</label>
-<input type="number" [(ngModel)]="num1">
-<br>
-
-<label>num2</label>
-<input type="number"[(ngModel)]="num2">
-<br>
-
-<button (click)="sum()">sum</button>
-<button (click)="mul()">mul</button>
-<br>
-
-<h4 >result is : {{result}}</h4>
-
-
-
-
-
+<div class="parent">
+    <div class="child">
+        <h1 appImp>calculator</h1>
+        <br>
+        <label>num1</label>
+        <input type="number" [(ngModel)]="num1">
+        <br><br>
+        <label>num2</label>
+        <input type="number" [(ngModel)]="num2">
+        <br>
+        <br>
+        <button (click)="sum()">sum</button>
+        <button (click)="mul()">mul</button>
+        <br>
+        <br>
+        <h3>result is : {{result}}</h3>
+    </div>
+</div>

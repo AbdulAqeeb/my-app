@@ -28,12 +28,16 @@ import { UserComponent } from './user/user.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { authenticationGuard } from './authentication.guard';
 import { notifyGuard } from './notify.guard';
+import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
+import { TodoComponent } from './todo/todo.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  {
-    path: 'dashboard', component: DashboardComponent,canActivate:[authenticationGuard], children: [
+  { path: 'todo', component: TodoComponent},
+{path: 'dashboard', component: DashboardComponent,canActivate:[authenticationGuard], children: [
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'data-binding', component: DataBindingComponent},
@@ -55,12 +59,18 @@ const routes: Routes = [
       {path: 'boredom', component:BoredomComponent},
       {path: 'github', component:GithubComponent},
       {path: 'createvehicle', component:CreatevehicleComponent,canDeactivate:[notifyGuard]},
+      {path: 'vehicledetails/:id', component:VehicledetailsComponent},
+      {path: 'edit vehicle/:id', component:CreatevehicleComponent},
       {path: 'user', component:UserComponent},
       {path: 'createaccount', component:CreateaccountComponent,canDeactivate:[notifyGuard]},
+      {path: 'parent', component:ParentComponent},
+      {path: 'child', component:ChildComponent}
+      
     ]
   },
   { path: '', component: LoginComponent },
   { path: '**', component: PageNotFoundComponent },
+  
 ];
 
 @NgModule({
