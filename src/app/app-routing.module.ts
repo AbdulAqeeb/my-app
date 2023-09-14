@@ -32,6 +32,13 @@ import { VehicledetailsComponent } from './vehicledetails/vehicledetails.compone
 import { TodoComponent } from './todo/todo.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { RatingChildComponent } from './rating-child/rating-child.component';
+import { RatingParentComponent } from './rating-parent/rating-parent.component';
+import { ResultParentComponent } from './result-parent/result-parent.component';
+import { ResultChildComponent } from './result-child/result-child.component';
+import { ItemComponent } from './item/item.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
@@ -64,7 +71,14 @@ const routes: Routes = [
       {path: 'user', component:UserComponent},
       {path: 'createaccount', component:CreateaccountComponent,canDeactivate:[notifyGuard]},
       {path: 'parent', component:ParentComponent},
-      {path: 'child', component:ChildComponent}
+      {path: 'child', component:ChildComponent},
+      {path: 'rating-parent', component:RatingParentComponent},
+      {path: 'rating-child', component:RatingChildComponent},
+      {path: 'result-parent', component:ResultParentComponent},
+      {path: 'result-child', component:ResultChildComponent},
+      {path: 'item', component:ItemComponent},
+      {path: 'nav', component:NavComponent},
+      {path: 'cart', component:CartComponent},
       
     ]
   },

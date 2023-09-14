@@ -39,6 +39,13 @@ import { VehicledetailsComponent } from './vehicledetails/vehicledetails.compone
 import { TodoComponent } from './todo/todo.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { RatingParentComponent } from './rating-parent/rating-parent.component';
+import { RatingChildComponent } from './rating-child/rating-child.component';
+import { ResultParentComponent } from './result-parent/result-parent.component';
+import { ResultChildComponent } from './result-child/result-child.component';
+import { ItemComponent } from './item/item.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -77,7 +84,14 @@ import { ChildComponent } from './child/child.component';
     VehicledetailsComponent,
     TodoComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    RatingParentComponent,
+    RatingChildComponent,
+    ResultParentComponent,
+    ResultChildComponent,
+    ItemComponent,
+    NavComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

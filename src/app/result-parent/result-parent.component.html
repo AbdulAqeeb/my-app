@@ -1,0 +1,10 @@
+<p>result-parent works!</p>
+<label>num1</label>
+<input type="number" [(ngModel)]="num1">
+<br>
+<label>num2</label>
+<input type="number" [(ngModel)]="num2">
+
+<h2>{{r1}}</h2>
+
+<app-result-child [n1]="num1" [n2]="num2" (result)="catch($event)"></app-result-child>
