@@ -46,6 +46,9 @@ import { ResultChildComponent } from './result-child/result-child.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { AboutModule } from './about/about.module';
+import { ContactHrComponent } from './contact-hr/contact-hr.component';
+import { ContactSupportComponent } from './contact-support/contact-support.component';
 
 
 @NgModule({
@@ -91,7 +94,10 @@ import { CartComponent } from './cart/cart.component';
     ResultChildComponent,
     ItemComponent,
     NavComponent,
-    CartComponent
+    CartComponent,
+    ContactHrComponent,
+    ContactSupportComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -99,6 +105,7 @@ import { CartComponent } from './cart/cart.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutModule
 
   ],
   providers: [],

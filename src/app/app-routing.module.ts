@@ -39,6 +39,9 @@ import { ResultChildComponent } from './result-child/result-child.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { AboutCeoComponent } from './about/about-ceo/about-ceo.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
+
 
 
 const routes: Routes = [
@@ -79,6 +82,12 @@ const routes: Routes = [
       {path: 'item', component:ItemComponent},
       {path: 'nav', component:NavComponent},
       {path: 'cart', component:CartComponent},
+      {path: 'about-ceo', component:AboutCeoComponent},
+      {path: 'about-company', component:AboutCompanyComponent},
+      {
+        path: 'contact',
+        loadChildren: () => import('./contact/contact.module').then(m =>m.ContactModule)
+      },
       
     ]
   },

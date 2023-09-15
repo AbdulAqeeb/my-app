@@ -7,6 +7,7 @@ import { CommonService } from '../common.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
+  
 public wishlist:number = 0;
 
 constructor(private commonService:CommonService){
